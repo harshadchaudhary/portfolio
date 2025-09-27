@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url("backport.jpg") no-repeat center center/cover;
+      color: #fff;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .logo span {
+      color: #ff4b2b;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ff4b2b;
+    }
+
+    /* Contact Section */
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .contact h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ff4b2b;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    form input,
+    form textarea {
+      padding: 12px;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .btn {
+      padding: 12px;
+      background: #ff4b2b;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff1a1a;
+      transform: translateY(-2px);
+    }
+
+    #response {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #fff;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      margin-top: 25px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .social-icons a {
+      font-size: 26px;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ff4b2b;
+      transform: scale(1.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .contact h2 {
+        font-size: 28px;
+      }
+
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Harshad<span>.</span></h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="response"></p>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a href="mailto:chaudharyharshad209@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/harshadchaudhary/harshadchaudhary.git" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="www.linkedin.com/in/harshad-chaudhary-737522324" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+</body>
+</html>
