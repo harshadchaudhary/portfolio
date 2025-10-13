@@ -325,3 +325,35 @@ footer {
 .project-links a:hover {
   background: #e63e20;
 }
+
+
+/* Optional inline grid fix (you can move this to style.css) */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 20px;
+    }
+    .project-card {
+      background: #1e1e1e;
+      color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+    .project-links a {
+      color: #00bcd4;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+    h3 {
+      margin-bottom: 10px;
+    }
