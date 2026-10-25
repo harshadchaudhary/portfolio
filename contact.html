@@ -3,198 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Portfolio</title>
+  <title>Contact | Harshad Chaudhary</title>
+  <meta name="description" content="Get in touch with Harshad Chaudhary — Junior .NET Backend Developer based in Mumbai, India.">
+  <meta property="og:title" content="Contact | Harshad Chaudhary">
+  <meta property="og:description" content="Junior .NET Backend Developer, Mumbai. Open to backend opportunities.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9881;</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-  <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url("backport.jpg") no-repeat center center/cover;
-      color: #fff;
-    }
-
-    header {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 15px 40px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .logo span {
-      color: #ff4b2b;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #ff4b2b;
-    }
-
-    /* Contact Section */
-    .contact {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 90vh;
-      padding: 40px 20px;
-      background: rgba(0, 0, 0, 0.6);
-    }
-
-    .contact h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      color: #ff4b2b;
-    }
-
-    form {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 15px;
-      width: 100%;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    form input,
-    form textarea {
-      padding: 12px;
-      border: none;
-      outline: none;
-      border-radius: 8px;
-      font-size: 16px;
-      background: rgba(255, 255, 255, 0.9);
-    }
-
-    form textarea {
-      resize: none;
-      height: 120px;
-    }
-
-    .btn {
-      padding: 12px;
-      background: #ff4b2b;
-      color: #fff;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #ff1a1a;
-      transform: translateY(-2px);
-    }
-
-    #response {
-      margin-top: 15px;
-      font-size: 16px;
-      color: #fff;
-      font-weight: 500;
-      text-align: center;
-    }
-
-    /* Social Icons */
-    .social-icons {
-      margin-top: 25px;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .social-icons a {
-      font-size: 26px;
-      color: #fff;
-      transition: 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #ff4b2b;
-      transform: scale(1.2);
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .nav-links {
-        display: none;
-      }
-
-      nav {
-        justify-content: center;
-      }
-
-      .contact h2 {
-        font-size: 28px;
-      }
-
-      form {
-        padding: 20px;
-      }
-    }
-  </style>
+  <script src="script.js" defer></script>
 </head>
 <body>
+
   <header>
     <nav>
-      <h1 class="logo">Harshad<span>.</span></h1>
+      <a href="index.html" class="logo">Harshad Chaudhary<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <p id="response"></p>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h2 class="section-title">Let's talk</h2>
+      <p class="section-sub">
+        Open to backend engineering opportunities and happy to talk about .NET, Kafka or
+        anything in the pipeline. Email is the fastest way to reach me.
+      </p>
 
-    <!-- Social Icons -->
-    <div class="social-icons">
-      <a href="mailto:chaudharyharshad209@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/harshadchaudhary/harshadchaudhary.git" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="www.linkedin.com/in/harshad-chaudhary-737522324" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <div class="contact-grid">
+
+        <!-- Formspree endpoint. Replace YOUR_FORM_ID with the id from
+             formspree.io; until then the form opens the visitor's mail client
+             instead of silently going nowhere. -->
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="What would you like to discuss?" required></textarea>
+
+          <!-- Spam trap: hidden from people, filled in by bots. -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot">
+
+          <button type="submit" class="btn">Send Message</button>
+          <p id="response" role="status" aria-live="polite"></p>
+        </form>
+
+        <div>
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span>Email</span>
+                <a href="mailto:chaudharyharshad209@gmail.com">chaudharyharshad209@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/harshad-chaudhary-737522324" target="_blank" rel="noopener">harshad-chaudhary</a>
+              </div>
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <div>
+                <span>GitHub</span>
+                <a href="https://github.com/harshadchaudhary" target="_blank" rel="noopener">github.com/harshadchaudhary</a>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-location-dot"></i>
+              <div>
+                <span>Location</span>
+                Mumbai, Maharashtra, India
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-file-arrow-down"></i>
+              <div>
+                <span>Resume</span>
+                <a href="Harshad_Chaudhary_DotNet_Resume.pdf" download>Download PDF</a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="social-icons">
+            <a href="mailto:chaudharyharshad209@gmail.com" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/harshadchaudhary" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/harshad-chaudhary-737522324" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span class="year">2026</span> Harshad Chaudhary &middot;
+        <a href="https://github.com/harshadchaudhary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="https://www.linkedin.com/in/harshad-chaudhary-737522324" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
 </body>
 </html>

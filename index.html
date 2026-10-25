@@ -3,65 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harshad Chaudhary | Portfolio</title>
+  <title>Harshad Chaudhary | Junior .NET Backend Developer</title>
+  <meta name="description" content="Junior .NET Backend Developer with 10 months of production experience building REST APIs and event-driven microservices with C#, .NET Core, Kafka, Redis, SQL Server and Kubernetes.">
+  <meta property="og:title" content="Harshad Chaudhary | Junior .NET Backend Developer">
+  <meta property="og:description" content="C# · .NET Core · ASP.NET · Kafka · Redis · SQL Server · OpenSearch · Kubernetes">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harshadchaudhary.github.io/portfolio/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9881;</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
+
   <header>
     <nav>
-      <h1 class="logo">Harshad Chaudhary<span>.</span></h1>
+      <a href="index.html" class="logo">Harshad Chaudhary<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-text">
-      <h2>Hello, I’m <span>Harshad Chaudhary</span></h2>
+    <div class="container">
+      <span class="eyebrow">Mumbai, India &middot; Open to opportunities</span>
+      <h1>Hi, I'm <span>Harshad Chaudhary</span></h1>
+      <p class="role">Junior .NET Backend Developer at Locobuzz</p>
+      <p class="blurb">
+        I build and maintain backend services, REST APIs and event-driven microservices
+        in C# and .NET Core — running in production on Kubernetes, moving data through
+        Kafka, cached in Redis, searched through OpenSearch and stored in SQL Server.
+        Ten months in, most of my day is real production code: shipping features,
+        tuning queries and debugging live incidents.
+      </p>
 
-      <p>A passionate Data Scientist(AIML) | Java & Python Developer | Full Stack Developer 🚀</p>
+      <div class="tech-strip">
+        <span class="chip chip-accent">C#</span>
+        <span class="chip chip-accent">.NET Core</span>
+        <span class="chip chip-accent">ASP.NET Core</span>
+        <span class="chip">REST APIs</span>
+        <span class="chip">Microservices</span>
+        <span class="chip">Apache Kafka</span>
+        <span class="chip">Redis</span>
+        <span class="chip">SQL Server</span>
+        <span class="chip">OpenSearch / Elasticsearch</span>
+        <span class="chip">Kubernetes</span>
+        <span class="chip">Docker</span>
+        <span class="chip">Git</span>
+      </div>
 
-      <a href="projects.html" class="btn">View My Work</a>
+      <div class="btn-row">
+        <a href="experience.html" class="btn">See My Experience</a>
+        <a href="Harshad_Chaudhary_DotNet_Resume.pdf" class="btn btn-ghost" download>Download Resume (PDF)</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b>10 months</b><span>Backend experience in production</span></div>
+        <div class="stat"><b>.NET&nbsp;8/9</b><span>Primary stack, C# services</span></div>
+        <div class="stat"><b>Kafka</b><span>Event-driven consumers &amp; producers</span></div>
+        <div class="stat"><b>K8s</b><span>Deployments &amp; production support</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section class="skills">
-    <h2>What I Do</h2>
-    <div class="skill-cards">
-      <div class="card">
+  <!-- What I do -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">What I do</span>
+      <h2 class="section-title">Backend engineering, day to day</h2>
+      <p class="section-sub">
+        The work I'm hired for, and the areas I've spent the last ten months inside.
+      </p>
 
-       
-      </div>
-      <div class="card">
-       <h3>💻 Data Science & AIML</h3>
-        <p>Building predictor models and ai tools web apps with python and machine learning Libraries.</p>
-      </div>
-      <div class="card">
-        <h3>☕ Java Development</h3>
-        <p>Strong foundation in Core Java, OOP, and backend application development.</p>
-      </div>
-      <div class="card">
-        <h3>🐍 Python Development</h3>
-        <p>Experience with Python scripting, data handling, and backend services.</p>
-      </div>
-      <div class="card">
-        <h3>📱 Android Development</h3>
-        <p>Creating Android apps with Java, XML, and Firebase integration.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>&#128295; Services &amp; REST APIs</h3>
+          <p>Developing and maintaining backend services and REST APIs with C#, .NET Core and ASP.NET Core — controllers, DI, configuration, background workers and clean request/response contracts.</p>
+          <div class="card-tags"><span>C#</span><span>ASP.NET Core</span><span>REST</span></div>
+        </div>
+
+        <div class="card">
+          <h3>&#128260; Event-Driven Microservices</h3>
+          <p>Kafka producers and consumers moving messages between services — consumer groups, offsets, retries and dead-letter handling, with an eye on lag and throughput.</p>
+          <div class="card-tags"><span>Kafka</span><span>Microservices</span><span>Avro / JSON</span></div>
+        </div>
+
+        <div class="card">
+          <h3>&#128451; SQL Server &amp; Query Tuning</h3>
+          <p>Writing and debugging stored procedures, shaping schemas and indexes, and tracing slow queries back to the plan that caused them. Daily driver tools: SSMS and DBeaver.</p>
+          <div class="card-tags"><span>SQL Server</span><span>SSMS</span><span>DBeaver</span></div>
+        </div>
+
+        <div class="card">
+          <h3>&#9889; Caching with Redis</h3>
+          <p>Adding Redis caching layers in front of hot reads, designing key patterns and TTLs, and handling cache invalidation so services stay fast without serving stale data.</p>
+          <div class="card-tags"><span>Redis</span><span>Caching</span><span>Performance</span></div>
+        </div>
+
+        <div class="card">
+          <h3>&#128269; Search &amp; Indexing</h3>
+          <p>Working with OpenSearch / Elasticsearch — index design, analyzer and mapping configuration, and tuning queries so search stays accurate and quick at scale.</p>
+          <div class="card-tags"><span>OpenSearch</span><span>Elasticsearch</span><span>Analyzers</span></div>
+        </div>
+
+        <div class="card">
+          <h3>&#128736; Deployment &amp; Production Support</h3>
+          <p>Supporting Kubernetes-based deployments, reading logs and metrics to monitor running services, and handling production troubleshooting from first report to root cause.</p>
+          <div class="card-tags"><span>Kubernetes</span><span>Docker</span><span>Monitoring</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Strengths -->
+  <section class="section section-alt">
+    <div class="container">
+      <span class="eyebrow">How I work</span>
+      <h2 class="section-title">Debugging is most of the job</h2>
+      <p class="section-sub">
+        Features matter, but the skill that grew fastest was finding out why a live system
+        is behaving the way it is.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Root cause, not symptom</h3>
+          <p>When something breaks in production I trace it end to end — logs, Kafka offsets, database rows — and confirm the cause with evidence before changing code.</p>
+        </div>
+        <div class="card">
+          <h3>Verify in the real system</h3>
+          <p>A fix isn't finished when it compiles. I check the actual outcome in the database and the service logs after deploying, so I know the behaviour genuinely changed.</p>
+        </div>
+        <div class="card">
+          <h3>Follow the existing patterns</h3>
+          <p>In a codebase of many services, I read how the neighbouring service solved the same problem before inventing a new approach — consistency keeps a platform maintainable.</p>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <a href="projects.html" class="btn">Browse Projects</a>
+        <a href="contact.html" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Harshad Chaudhary. All Rights Reserved.</p>
+    <div class="container">
+      <p>&copy; <span class="year">2026</span> Harshad Chaudhary &middot;
+        <a href="https://github.com/harshadchaudhary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="https://www.linkedin.com/in/harshad-chaudhary-737522324" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
   </footer>
+
 </body>
 </html>

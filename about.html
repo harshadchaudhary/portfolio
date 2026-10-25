@@ -3,76 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Portfolio</title>
+  <title>About | Harshad Chaudhary</title>
+  <meta name="description" content="About Harshad Chaudhary — Junior .NET Backend Developer in Mumbai, B.Sc. Information Technology graduate, working on production microservices at Locobuzz.">
+  <meta property="og:title" content="About | Harshad Chaudhary">
+  <meta property="og:description" content="Junior .NET Backend Developer in Mumbai. B.Sc. IT graduate working on production microservices.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9881;</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
+
   <header>
     <nav>
-      <h1 class="logo">Harshad <span>.</span></h1>
+      <a href="index.html" class="logo">Harshad Chaudhary<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- About Section -->
-  <section class="about">
+  <section class="section">
     <div class="container">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          Hi, I’m <b>Harshad Chaudhary</b> from Mumbai 👋  
-          I recently completed my <b>BSc(IT)</b> from <b>Mumbai Univercity</b>.  
-          Passionate about technology and problem solving, I specialize in:
-        </p>
-        <ul>
-          <li>💻 Data Science & AIML (python, pandas, numpy, scikit-learn, TensorFlow, SQL)</li>
-          <li>💻 AIML Engineer</li>
-          <li>☕ Java & Python Backend Development</li>
-          <li>📱 Android Development (Java, Firebase, APIs)</li>
-          <li>🔐 Information Security & Software Testing</li>
-        </ul>
-        <p>
-          I enjoy creating <b>real-world projects</b> like my <b>UrbanGraph</b> and  
-          <b>car-price-predictor</b>. My goal is to become a skilled AIML engineer  
-          and contribute to impactful projects.
-        </p>
-        <a href="projects.html" class="btn">View My Work</a>
-      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="eyebrow">About me</span>
+          <h2 class="section-title">From a B.Sc. IT degree to production microservices</h2>
 
-      <div class="about-img">
-        <img src="harshadphoto.jpg" alt="Harshad Chaudhary">
+          <p>
+            I'm <b>Harshad Chaudhary</b>, a Junior .NET Backend Developer based in
+            <b>Mumbai, India</b>. I graduated with a <b>B.Sc. in Information Technology</b>
+            from Lord's Universal College, University of Mumbai, in 2025.
+          </p>
+
+          <p>
+            I joined <b>Locobuzz</b> as a backend intern in January 2026 and became a
+            Junior .NET Developer in May. Since then my work has been squarely backend:
+            <b>C#, .NET Core and ASP.NET Core</b> services, REST APIs and event-driven
+            microservices talking to each other over <b>Kafka</b>, with <b>SQL Server</b>
+            behind them, <b>Redis</b> in front of the hot reads and
+            <b>OpenSearch</b> handling search.
+          </p>
+
+          <p>
+            The biggest change from college projects is scale and consequence. Code runs on
+            <b>Kubernetes</b> against live data, so a slow query or a mishandled Kafka message
+            is something a customer notices. That pushed me into the parts of engineering I now
+            enjoy most — reading logs, tracing a problem across service boundaries to its real
+            cause, and making a fix I can actually prove worked.
+          </p>
+
+          <p>
+            Before this I spent a lot of time on <b>Python and machine learning</b> — predictive
+            models, Flask APIs and Streamlit dashboards. I don't work in that stack day to day
+            now, but it's where I learned to handle data properly, and those projects are still
+            up on my GitHub.
+          </p>
+
+          <h3 style="margin:26px 0 12px; font-size:18px;">What I'm looking for</h3>
+          <p>
+            Backend roles where I can keep going deeper into distributed systems and .NET —
+            more ownership of services, more design input, and a team that takes production
+            reliability seriously.
+          </p>
+
+          <div class="btn-row">
+            <a href="experience.html" class="btn">My Experience</a>
+            <a href="Harshad_Chaudhary_DotNet_Resume.pdf" class="btn btn-ghost" download>Download Resume</a>
+          </div>
+        </div>
+
+        <div class="about-img">
+          <img src="harshadphoto.jpg" alt="Portrait of Harshad Chaudhary">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Timeline / Education -->
-  <section class="timeline">
-    <h2>My Journey</h2>
-    <div class="timeline-container">
-      <div class="timeline-item">
-        <h3>2025</h3>
-        <p>Graduated BSc(IT), Lord's Universal College 🎓</p>
-      </div>
-      <div class="timeline-item">
-        <h3>2025</h3>
-        <p>Developed <b>UrbanGraph</b> real-time traffic intelligence platform using Python 🏫</p>
-      </div>
-      <div class="timeline-item">
-        <h3>2025</h3>
-        <p>Built <b>car-price-predictor</b> for car price prediction using Python</p>
+  <!-- Journey -->
+  <section class="section section-alt">
+    <div class="container">
+      <span class="eyebrow">Journey</span>
+      <h2 class="section-title">How I got here</h2>
+      <p class="section-sub">Education, first job, and the shift into backend engineering.</p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">May 2026 &ndash; Present</div>
+          <h3>Junior .NET Backend Developer, Locobuzz</h3>
+          <p class="tl-org">Owning backend services, Kafka consumers, SQL Server work and production support.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Jan 2026 &ndash; Apr 2026</div>
+          <h3>Backend Developer Intern (.NET), Locobuzz</h3>
+          <p class="tl-org">First exposure to a real microservice platform — .NET Core, Kafka, Git workflow, Docker.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2025</div>
+          <h3>B.Sc. Information Technology</h3>
+          <p class="tl-org">Lord's Universal College, University of Mumbai &middot; 6.9 CGPA</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2024 &ndash; 2025</div>
+          <h3>Self-taught projects</h3>
+          <p class="tl-org">Built UrbanGraph, Car Price Predictor, Student Marks Predictor and a full-stack Library Management app.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Education + certs -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Credentials</span>
+      <h2 class="section-title">Education &amp; certifications</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>&#127891; B.Sc. Information Technology</h3>
+          <p>Lord's Universal College, University of Mumbai &mdash; 2025<br>CGPA 6.9</p>
+        </div>
+        <div class="card">
+          <h3>&#128196; Certifications</h3>
+          <ul>
+            <li>Full Stack Web Development &mdash; Edufyi Tech Solutions (Apr 2025)</li>
+            <li>Career Essentials in Software Development &mdash; Microsoft &amp; LinkedIn (Dec 2024)</li>
+            <li>Career Essentials in Project Management &mdash; Microsoft &amp; LinkedIn (Nov 2024)</li>
+            <li>Google Generative AI Certificate (Oct 2025)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>&#127758; Languages</h3>
+          <p>English, Hindi, Gujarati</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Harshad Chaudhary. All Rights Reserved.</p>
+    <div class="container">
+      <p>&copy; <span class="year">2026</span> Harshad Chaudhary &middot;
+        <a href="https://github.com/harshadchaudhary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="https://www.linkedin.com/in/harshad-chaudhary-737522324" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
   </footer>
+
 </body>
 </html>

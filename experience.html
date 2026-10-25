@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Harshad Chaudhary</title>
+  <meta name="description" content="Ten months of production backend experience at Locobuzz — .NET Core microservices, Kafka event pipelines, Redis caching, SQL Server tuning, OpenSearch indexing and Kubernetes production support.">
+  <meta property="og:title" content="Experience | Harshad Chaudhary">
+  <meta property="og:description" content="Intern to Junior .NET Backend Developer — production microservices, Kafka, Redis, SQL Server, Kubernetes.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9881;</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Harshad Chaudhary<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html" class="active">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Experience</span>
+      <h1>Ten months writing <span>production backend code</span></h1>
+      <p class="blurb">
+        I joined Locobuzz as an intern in January 2026 and moved into a Junior .NET
+        Developer role in May. Locobuzz is a social listening and customer-experience
+        platform, so the backend is a fleet of .NET microservices that ingest a constant
+        stream of data, enrich it and serve it back through APIs — which meant learning
+        distributed systems on a live system rather than in a tutorial.
+      </p>
+      <div class="btn-row">
+        <a href="Harshad_Chaudhary_DotNet_Resume.pdf" class="btn" download>Download Resume (PDF)</a>
+        <a href="contact.html" class="btn btn-ghost">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Career so far</span>
+      <h2 class="section-title">Locobuzz</h2>
+      <p class="section-sub">Mumbai, India &middot; January 2026 &ndash; Present</p>
+
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-date">May 2026 &ndash; Present</div>
+          <h3>Junior .NET Backend Developer</h3>
+          <p class="tl-org">Locobuzz &middot; Full-time</p>
+          <ul>
+            <li><b>Backend services &amp; APIs.</b> Developing and maintaining backend services and REST APIs in C#, .NET Core and ASP.NET Core, including request validation, dependency injection, configuration and background worker services.</li>
+            <li><b>Event-driven microservices.</b> Building Kafka producers and consumers that pass messages between services, handling consumer groups, offset management, retries, serialization and failure/dead-letter paths.</li>
+            <li><b>SQL Server work.</b> Writing and debugging stored procedures and queries, reviewing execution plans and indexes, and resolving slow or timing-out queries — using SSMS and DBeaver daily.</li>
+            <li><b>Redis caching.</b> Introducing caching layers for frequently read configuration and lookup data, designing key structures and expiry, and wiring up invalidation so cached values refresh when the source changes.</li>
+            <li><b>Search &amp; indexing.</b> Working with OpenSearch / Elasticsearch on index and mapping design, analyzer configuration and query tuning for faster, more accurate search results.</li>
+            <li><b>Deployments &amp; production support.</b> Supporting Kubernetes-based deployments, monitoring running services through logs and dashboards, and handling live production issues end to end — reproduce, root cause, fix, verify.</li>
+            <li><b>Integrations.</b> Building and maintaining third-party API and webhook integrations, handling JSON payloads, authentication and token lifecycles, and error handling for unreliable upstreams.</li>
+            <li><b>Version control.</b> Managing branching, code review and release branches in Git across multiple service repositories.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Jan 2026 &ndash; Apr 2026</div>
+          <h3>Backend Developer Intern (.NET)</h3>
+          <p class="tl-org">Locobuzz &middot; Internship</p>
+          <ul>
+            <li>Learned the .NET Core service codebase and the platform's microservice architecture, then started on scoped bug fixes and small features in live services.</li>
+            <li>Picked up Kafka fundamentals hands-on — topics, partitions, consumer groups and lag — by tracing real messages through the pipeline.</li>
+            <li>Wrote SQL queries against production-scale data to investigate reported issues and confirm whether a fix actually changed the stored result.</li>
+            <li>Got comfortable with Git branching workflows, code review feedback, Docker and the team's deployment process.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture diagram -->
+  <section class="section section-alt">
+    <div class="container">
+      <span class="eyebrow">The shape of the work</span>
+      <h2 class="section-title">A pipeline I work inside</h2>
+      <p class="section-sub">
+        A generic view of the kind of event-driven flow my services sit in — data arrives
+        from external platforms, travels through Kafka, and is processed by .NET Core
+        consumers that read and write across a cache, a relational store and a search index.
+      </p>
+
+      <div class="diagram">
+        <svg viewBox="0 0 820 300" role="img" aria-label="Architecture diagram: external APIs and webhooks feed an ASP.NET Core ingest API, which publishes to a Kafka topic, consumed by a .NET Core worker service that writes to SQL Server, Redis and OpenSearch, all running on Kubernetes.">
+          <defs>
+            <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7785"></path>
+            </marker>
+          </defs>
+
+          <!-- Kubernetes boundary -->
+          <rect x="158" y="62" width="482" height="176" rx="12" fill="none" stroke="#2f6f8f" stroke-width="1.5" stroke-dasharray="7 5"></rect>
+          <text x="172" y="82" fill="#38bdf8" font-family="Inter, sans-serif" font-size="12" font-weight="700" letter-spacing="1">KUBERNETES CLUSTER</text>
+
+          <!-- Boxes -->
+          <g font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#e8ecf1" text-anchor="middle">
+
+            <rect x="10" y="121" width="132" height="58" rx="9" fill="#151a21" stroke="#242b35"></rect>
+            <text x="76" y="145">External APIs</text>
+            <text x="76" y="162" font-size="12" font-weight="400" fill="#9aa6b4">&amp; Webhooks</text>
+
+            <rect x="174" y="121" width="132" height="58" rx="9" fill="#151a21" stroke="#242b35"></rect>
+            <text x="240" y="145">ASP.NET Core</text>
+            <text x="240" y="162" font-size="12" font-weight="400" fill="#9aa6b4">Ingest API</text>
+
+            <rect x="338" y="121" width="132" height="58" rx="9" fill="#2a1511" stroke="#ff4c29"></rect>
+            <text x="404" y="145" fill="#ff4c29">Kafka Topic</text>
+            <text x="404" y="162" font-size="12" font-weight="400" fill="#c98c7c">partitioned stream</text>
+
+            <rect x="502" y="121" width="132" height="58" rx="9" fill="#151a21" stroke="#242b35"></rect>
+            <text x="568" y="145">.NET Core</text>
+            <text x="568" y="162" font-size="12" font-weight="400" fill="#9aa6b4">Consumer Service</text>
+
+            <rect x="676" y="30" width="134" height="52" rx="9" fill="#101c24" stroke="#38bdf8"></rect>
+            <text x="743" y="54" fill="#38bdf8">Redis</text>
+            <text x="743" y="70" font-size="11.5" font-weight="400" fill="#7fa8bd">cache layer</text>
+
+            <rect x="676" y="124" width="134" height="52" rx="9" fill="#101c24" stroke="#38bdf8"></rect>
+            <text x="743" y="148" fill="#38bdf8">SQL Server</text>
+            <text x="743" y="164" font-size="11.5" font-weight="400" fill="#7fa8bd">relational store</text>
+
+            <rect x="676" y="218" width="134" height="52" rx="9" fill="#101c24" stroke="#38bdf8"></rect>
+            <text x="743" y="242" fill="#38bdf8">OpenSearch</text>
+            <text x="743" y="258" font-size="11.5" font-weight="400" fill="#7fa8bd">search index</text>
+          </g>
+
+          <!-- Arrows -->
+          <g stroke="#6b7785" stroke-width="1.8" fill="none" marker-end="url(#arw)">
+            <line x1="142" y1="150" x2="170" y2="150"></line>
+            <line x1="306" y1="150" x2="334" y2="150"></line>
+            <line x1="470" y1="150" x2="498" y2="150"></line>
+            <path d="M 634 150 L 655 150 L 655 56 L 672 56"></path>
+            <line x1="634" y1="150" x2="672" y2="150"></line>
+            <path d="M 634 150 L 655 150 L 655 244 L 672 244"></path>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills matrix -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Technical skills</span>
+      <h2 class="section-title">What I work with</h2>
+      <p class="section-sub">Grouped by how often I actually touch them, not by what sounds impressive.</p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Languages &amp; Frameworks</h3>
+          <ul>
+            <li>C# &mdash; primary language</li>
+            <li>.NET Core / .NET 8&ndash;9, ASP.NET Core</li>
+            <li>REST API design, Web API controllers</li>
+            <li>Background &amp; worker services</li>
+            <li>Python, Java, JavaScript (working knowledge)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Data &amp; Messaging</h3>
+          <ul>
+            <li>SQL Server &mdash; stored procedures, query tuning, indexing</li>
+            <li>Apache Kafka &mdash; producers, consumers, consumer groups</li>
+            <li>Redis &mdash; caching, key design, invalidation</li>
+            <li>OpenSearch / Elasticsearch &mdash; indexing, analyzers</li>
+            <li>JSON &amp; Avro payload handling</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Platform &amp; Tooling</h3>
+          <ul>
+            <li>Kubernetes &mdash; deployments, pods, logs</li>
+            <li>Docker &mdash; containerised services</li>
+            <li>Git &mdash; branching, code review, releases</li>
+            <li>SSMS, DBeaver, Postman</li>
+            <li>Log &amp; metrics dashboards for monitoring</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Practices</h3>
+          <ul>
+            <li>Production support &amp; incident troubleshooting</li>
+            <li>Root-cause analysis across service boundaries</li>
+            <li>Backend performance optimisation</li>
+            <li>Third-party API &amp; webhook integration</li>
+            <li>Writing tests around the behaviour I change</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span class="year">2026</span> Harshad Chaudhary &middot;
+        <a href="https://github.com/harshadchaudhary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="https://www.linkedin.com/in/harshad-chaudhary-737522324" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
