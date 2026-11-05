@@ -19,6 +19,10 @@
     .sheet-wrap { padding: 44px 0 72px; }
 
     .sheet {
+      /* Arial/Helvetica, not the site's Inter. Resume parsers are tested
+         against the standard families; a webfont is an avoidable risk on
+         the one document that has to survive machine reading. */
+      font-family: Arial, Helvetica, "Liberation Sans", sans-serif;
       background: #fff;
       color: #1b2026;
       max-width: 820px;
@@ -158,7 +162,7 @@
     }
 
     /* ---- Print / PDF: tuned to land on a single A4 page ---- */
-    @page { size: A4; margin: 9mm 10mm; }
+    @page { size: A4; margin: 7mm 10mm; }
 
     @media print {
       header, footer, .sheet-actions { display: none !important; }
@@ -169,24 +173,24 @@
         border-radius: 0;
         max-width: none;
         padding: 0;
-        font-size: 8.3pt;
-        line-height: 1.26;
+        font-size: 9pt;
+        line-height: 1.24;
       }
-      .r-name { font-size: 17pt; }
-      .r-title { font-size: 9.5pt; }
-      .r-contact { font-size: 7.5pt; margin-top: 4px; }
+      .r-name { font-size: 18pt; }
+      .r-title { font-size: 11pt; }
+      .r-contact { font-size: 9pt; margin-top: 4px; }
       .r-rule { margin-top: 7px; }
-      .r-sec { margin-top: 7px; }
-      .r-sec > h2 { font-size: 8pt; margin-bottom: 4px; padding-bottom: 2px; }
-      .r-role { font-size: 9.2pt; }
-      .r-when, .r-org { font-size: 7.9pt; }
-      .r-job { margin-bottom: 6px; }
-      .sheet li { margin-bottom: 1.2px; }
-      .r-skill { font-size: 7.9pt; }
+      .r-sec { margin-top: 6px; }
+      .r-sec > h2 { font-size: 10pt; margin-bottom: 4px; padding-bottom: 2px; }
+      .r-role { font-size: 10.5pt; }
+      .r-when, .r-org { font-size: 9.5pt; }
+      .r-job { margin-bottom: 5px; }
+      .sheet li { margin-bottom: 1px; }
+      .r-skill { font-size: 9.5pt; }
       .r-skill-row { margin-bottom: 1.4px; text-indent: -11px; padding-left: 11px; }
       .r-proj { margin-bottom: 4px; }
-      .r-proj em { font-size: 7.7pt; }
-      .r-row, .r-inline { font-size: 8pt; }
+      .r-proj em { font-size: 9.2pt; }
+      .r-row, .r-inline { font-size: 9.5pt; }
       .r-job, .r-sec { break-inside: avoid; page-break-inside: avoid; }
       .sheet a { color: #0b57a4; }
     }
@@ -234,8 +238,7 @@
             working across <b>C# / .NET Core</b>, <b>Python</b> and <b>Java</b>. Builds REST APIs and
             event-driven microservices on <b>Apache Kafka</b>, backed by <b>SQL Server</b>, <b>Redis</b>
             and <b>OpenSearch</b>, deployed on <b>Kubernetes</b>. Hands-on with <b>Apache Flink</b>
-            stream processing, Python webhook-dispatch and scheduled services, query performance
-            tuning, and production troubleshooting with root-cause analysis on live systems.
+            stream processing, query tuning and production root-cause analysis.
           </p>
         </section>
 
@@ -249,16 +252,14 @@
             </div>
             <div class="r-org">Locobuzz &middot; Mumbai, India</div>
             <ul>
-              <li>Developed and maintained backend services and REST APIs in <b>C#, .NET Core and ASP.NET Core</b> &mdash; Web API controllers, dependency injection, configuration and background worker services.</li>
+              <li>Developed and maintained backend services and REST APIs in <b>C#, .NET Core and ASP.NET Core</b> &mdash; Web API controllers, dependency injection and background worker services.</li>
               <li>Built <b>Kafka</b> producers and consumers for event-driven microservices (consumer groups, offset handling, serialization, retries, dead-letter paths); validated a pipeline sustaining <b>~300 messages/second</b> under load testing.</li>
               <li>Cut a repeatedly executed configuration lookup from <b>~21,000 queries/day to ~150/day</b> by introducing a two-tier <b>Redis</b> cache with an invalidation contract, removing the stale-read risk.</li>
               <li>Traced and eliminated a runaway query pattern responsible for roughly <b>1.4 million redundant database calls</b>, removing a recurring source of connection-pool exhaustion.</li>
               <li>Worked on <b>Apache Flink</b> streaming pipelines (<b>Java</b>) &mdash; diagnosed consumer-lag bursts and TaskManager failures, and tuned job parallelism and autoscaling to restore throughput.</li>
               <li>Built and maintained <b>Python</b> services: a webhook API dispatcher, scheduled cron jobs, and a dynamic query-builder module for a web and news data indexing service.</li>
-              <li>Wrote and debugged <b>SQL Server</b> stored procedures and queries over large production tables; analysed execution plans and indexes to resolve slow and timing-out queries.</li>
-              <li>Configured <b>OpenSearch / Elasticsearch</b> indexes, mappings and analyzers to improve search relevance and response time.</li>
-              <li>Supported <b>Kubernetes</b> deployments and production monitoring; owned live incidents end to end &mdash; reproduce, trace across service boundaries, fix root cause, verify in production.</li>
-              <li>Integrated third-party <b>REST APIs and webhooks</b>, handling JSON payloads, OAuth token refresh lifecycles, rate limits and upstream failures; managed branching and releases in <b>Git</b>.</li>
+              <li>Wrote and debugged <b>SQL Server</b> stored procedures over large production tables, analysing execution plans and indexes to resolve slow and timing-out queries; configured <b>OpenSearch / Elasticsearch</b> mappings and analyzers to improve search relevance.</li>
+              <li>Integrated third-party <b>REST APIs and webhooks</b> (JSON payloads, OAuth token-refresh lifecycles, rate limits); supported <b>Kubernetes</b> deployments and monitoring, and owned live incidents end to end &mdash; reproduce, trace across service boundaries, fix root cause, verify in production.</li>
             </ul>
           </div>
 
@@ -269,8 +270,7 @@
             </div>
             <div class="r-org">Locobuzz &middot; Mumbai, India</div>
             <ul>
-              <li>Learned the .NET Core microservice codebase and delivered scoped bug fixes and small features in live services.</li>
-              <li>Picked up Kafka fundamentals hands-on &mdash; topics, partitions, consumer groups and lag &mdash; by tracing real messages through the data pipeline; queried production-scale SQL Server data to verify every fix changed the stored result.</li>
+              <li>Delivered scoped bug fixes and small features in live <b>.NET Core</b> microservices; learned <b>Kafka</b> fundamentals hands-on by tracing real messages through the data pipeline, and queried production-scale <b>SQL Server</b> data to verify every fix changed the stored result.</li>
             </ul>
           </div>
         </section>
@@ -284,7 +284,7 @@
             <div class="r-skill-row"><dt>Data &amp; Caching:</dt> <dd>SQL Server (stored procedures, indexing, query optimisation), Redis, OpenSearch / Elasticsearch, MySQL, MongoDB</dd></div>
             <div class="r-skill-row"><dt>DevOps &amp; Tools:</dt> <dd>Kubernetes, Docker, Git / GitHub, CI/CD pipelines, SSMS, DBeaver, Postman, Visual Studio</dd></div>
             <div class="r-skill-row"><dt>Core Concepts:</dt> <dd>OOP, SOLID, design patterns, data structures &amp; algorithms, concurrency &amp; async programming, multithreading, distributed systems, system design fundamentals</dd></div>
-            <div class="r-skill-row"><dt>Practices:</dt> <dd>Production support, root-cause analysis, performance optimisation, unit testing, code review</dd></div>
+            <div class="r-skill-row"><dt>Practices:</dt> <dd>Production support, root-cause analysis, performance optimisation, unit testing, code review, Agile/Scrum</dd></div>
           </dl>
         </section>
 
@@ -292,15 +292,11 @@
           <h2>Projects</h2>
           <div class="r-proj">
             <b>Order Events &mdash; Event-Driven Backend</b> &mdash; <em>C#, .NET 9, ASP.NET Core, Kafka, Redis, SQL Server, EF Core, Docker</em> &middot; <a href="https://github.com/harshadchaudhary/order-events-api">github.com/harshadchaudhary/order-events-api</a><br>
-            REST API that persists an order and publishes to Kafka, plus a worker that consumes the event, applies the rules and writes back the outcome. Manual offset commits after successful handling, idempotent writes against at-least-once redelivery, Redis cache-aside with invalidation, 22 xUnit tests, full Docker Compose stack.
+            REST API persists an order and publishes to Kafka; a worker consumes it, applies the rules and writes back the outcome. Manual offset commits after success, idempotent writes against at-least-once redelivery, Redis cache-aside, 22 xUnit tests, Docker Compose.
           </div>
           <div class="r-proj">
             <b>Feed Ingest Service</b> &mdash; <em>Python, FastAPI, APScheduler, SQLAlchemy, PostgreSQL, Redis, pytest, Docker</em> &middot; <a href="https://github.com/harshadchaudhary/feed-ingest-service">github.com/harshadchaudhary/feed-ingest-service</a><br>
-            Scheduled ingestion service with idempotent upserts keyed on a SHA-256 content hash, a Redis lock preventing overlapping runs, high-water-mark incremental fetching, HMAC-verified webhook intake storing raw bodies before parsing, and jittered retry with per-call timeouts. 95 pytest tests; parsing and deduplication isolated in a pure, I/O-free module.
-          </div>
-          <div class="r-proj">
-            <b>UrbanGraph &amp; Prediction Services</b> &mdash; <em>Python, Scikit-learn, Flask, Streamlit</em><br>
-            Real-time traffic intelligence platform using graph modelling for route and congestion insight; car-price and student-marks predictors with model comparison served through Flask APIs and dashboards.
+            Idempotent upserts keyed on a SHA-256 content hash, a Redis lock preventing overlapping runs, high-water-mark incremental fetching, HMAC-verified webhook intake, jittered retry with timeouts. 95 pytest tests; pure, I/O-free parsing module.
           </div>
         </section>
 
@@ -310,10 +306,9 @@
             <div><b>B.Sc. (Information Technology)</b> &mdash; Lord's Universal College, University of Mumbai</div>
             <div class="r-when">2025 &middot; 6.9 CGPA</div>
           </div>
-          <p class="r-inline" style="margin-top:5px;">
-            Full Stack Web Development &ndash; Edufyi Tech Solutions (2025) &middot;
-            Google Generative AI Certificate (2025) &middot;
-            Career Essentials in Software Development &ndash; Microsoft &amp; LinkedIn (2024)
+          <p class="r-inline" style="margin-top:4px;">
+            <b>Certifications:</b> Full Stack Web Development, Edufyi Tech Solutions (2025) &middot;
+            Google Generative AI (2025) &middot; Career Essentials in Software Development, Microsoft &amp; LinkedIn (2024)
           </p>
         </section>
 
