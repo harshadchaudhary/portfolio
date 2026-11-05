@@ -295,12 +295,12 @@
             REST API that persists an order and publishes to Kafka, plus a worker that consumes the event, applies the rules and writes back the outcome. Manual offset commits after successful handling, idempotent writes against at-least-once redelivery, Redis cache-aside with invalidation, 22 xUnit tests, full Docker Compose stack.
           </div>
           <div class="r-proj">
-            <b>UrbanGraph &mdash; Real-Time Traffic Intelligence Platform</b> &mdash; <em>Python</em><br>
-            End-to-end platform ingesting live traffic data, modelling it as a graph and surfacing route and congestion insight.
+            <b>Feed Ingest Service</b> &mdash; <em>Python, FastAPI, APScheduler, SQLAlchemy, PostgreSQL, Redis, pytest, Docker</em> &middot; <a href="https://github.com/harshadchaudhary/feed-ingest-service">github.com/harshadchaudhary/feed-ingest-service</a><br>
+            Scheduled ingestion service with idempotent upserts keyed on a SHA-256 content hash, a Redis lock preventing overlapping runs, high-water-mark incremental fetching, HMAC-verified webhook intake storing raw bodies before parsing, and jittered retry with per-call timeouts. 95 pytest tests; parsing and deduplication isolated in a pure, I/O-free module.
           </div>
           <div class="r-proj">
-            <b>Prediction Services</b> &mdash; <em>Python, Scikit-learn, Flask, Streamlit</em><br>
-            Car Price Predictor and Student Marks Predictor &mdash; model comparison and feature analysis served through Flask APIs with interactive dashboards.
+            <b>UrbanGraph &amp; Prediction Services</b> &mdash; <em>Python, Scikit-learn, Flask, Streamlit</em><br>
+            Real-time traffic intelligence platform using graph modelling for route and congestion insight; car-price and student-marks predictors with model comparison served through Flask APIs and dashboards.
           </div>
         </section>
 
