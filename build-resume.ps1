@@ -1,4 +1,4 @@
-# Rebuilds Harshad_Chaudhary_DotNet_Resume.pdf from resume.html.
+# Rebuilds Harshad_Chaudhary_Backend_Engineer_Resume.pdf from resume.html.
 # Run this after editing resume.html so the downloadable PDF stays in sync.
 #
 #   powershell -ExecutionPolicy Bypass -File build-resume.ps1
@@ -7,7 +7,7 @@ $ErrorActionPreference = "Stop"
 
 $root   = Split-Path -Parent $MyInvocation.MyCommand.Path
 $source = Join-Path $root "resume.html"
-$final  = Join-Path $root "Harshad_Chaudhary_DotNet_Resume.pdf"
+$final  = Join-Path $root "Harshad_Chaudhary_Backend_Engineer_Resume.pdf"
 $temp   = Join-Path $env:TEMP "resume_build.pdf"
 
 $chrome = @(

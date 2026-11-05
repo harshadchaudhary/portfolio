@@ -27,7 +27,7 @@ contact form).
 
 ## Rebuilding the resume PDF
 
-`Harshad_Chaudhary_DotNet_Resume.pdf` is generated from `resume.html`.
+`Harshad_Chaudhary_Backend_Engineer_Resume.pdf` is generated from `resume.html`.
 After editing the resume, regenerate it:
 
 ```powershell
