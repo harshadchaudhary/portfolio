@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience | Harshad Chaudhary</title>
-  <meta name="description" content="Ten months of production backend experience at Locobuzz — .NET Core microservices, Kafka event pipelines, Redis caching, SQL Server tuning, OpenSearch indexing and Kubernetes production support.">
+  <meta name="description" content="Ten months of production backend experience at Locobuzz — .NET Core microservices, Kafka and Flink streaming, Python services, Redis caching, SQL Server tuning and Kubernetes production support.">
   <meta property="og:title" content="Experience | Harshad Chaudhary">
-  <meta property="og:description" content="Intern to Junior .NET Backend Developer — production microservices, Kafka, Redis, SQL Server, Kubernetes.">
+  <meta property="og:description" content="Intern to Junior Software Engineer — production microservices across C#, Python and Java.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9881;</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,11 +36,12 @@
       <span class="eyebrow">Experience</span>
       <h1>Ten months writing <span>production backend code</span></h1>
       <p class="blurb">
-        I joined Locobuzz as an intern in January 2026 and moved into a Junior .NET
-        Developer role in May. Locobuzz is a social listening and customer-experience
-        platform, so the backend is a fleet of .NET microservices that ingest a constant
-        stream of data, enrich it and serve it back through APIs — which meant learning
-        distributed systems on a live system rather than in a tutorial.
+        I joined Locobuzz as an intern in January 2026 and moved into a full-time backend
+        engineering role in May. Locobuzz is a social listening and customer-experience
+        platform, so the backend is a fleet of microservices ingesting a constant stream of
+        data, enriching it and serving it back through APIs. That meant learning distributed
+        systems on a live system rather than in a tutorial — and working in whichever language
+        the service was written in: C#, Python or Java.
       </p>
       <div class="btn-row">
         <a href="Harshad_Chaudhary_DotNet_Resume.pdf" class="btn" download>Download Resume (PDF)</a>
@@ -49,34 +50,65 @@
     </div>
   </section>
 
-  <!-- Timeline -->
+  <!-- Measured outcomes -->
   <section class="section">
+    <div class="container">
+      <span class="eyebrow">Measured outcomes</span>
+      <h2 class="section-title">Numbers I can point at</h2>
+      <p class="section-sub">
+        Work where the before-and-after was measurable, described without client or
+        internal system names.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>21,000 &rarr; 150 queries/day</h3>
+          <p>A configuration lookup was being re-read on every message. I put a two-tier Redis cache in front of it with a proper invalidation contract, cutting it to roughly 150 queries a day without introducing stale reads.</p>
+          <div class="card-tags"><span>Redis</span><span>Caching</span></div>
+        </div>
+        <div class="card">
+          <h3>~1.4M redundant DB calls removed</h3>
+          <p>Traced a runaway query pattern that was issuing roughly 1.4 million unnecessary database calls, and removed a recurring source of connection-pool exhaustion along with it.</p>
+          <div class="card-tags"><span>SQL Server</span><span>Profiling</span></div>
+        </div>
+        <div class="card">
+          <h3>~300 messages/second sustained</h3>
+          <p>Load-tested an ingestion pipeline end to end and confirmed it held around 300 messages per second, identifying where consumer lag built up before it reached production.</p>
+          <div class="card-tags"><span>Kafka</span><span>Load testing</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section section-alt">
     <div class="container">
       <span class="eyebrow">Career so far</span>
       <h2 class="section-title">Locobuzz</h2>
-      <p class="section-sub">Mumbai, India &middot; January 2026 &ndash; Present</p>
+      <p class="section-sub">Mumbai, India &middot; January 2026 &ndash; November 2026</p>
 
       <div class="timeline">
 
         <div class="tl-item">
-          <div class="tl-date">May 2026 &ndash; Present</div>
-          <h3>Junior .NET Backend Developer</h3>
+          <div class="tl-date">May 2026 &ndash; Nov 2026</div>
+          <h3>Junior Software Engineer &mdash; Backend</h3>
           <p class="tl-org">Locobuzz &middot; Full-time</p>
           <ul>
-            <li><b>Backend services &amp; APIs.</b> Developing and maintaining backend services and REST APIs in C#, .NET Core and ASP.NET Core, including request validation, dependency injection, configuration and background worker services.</li>
-            <li><b>Event-driven microservices.</b> Building Kafka producers and consumers that pass messages between services, handling consumer groups, offset management, retries, serialization and failure/dead-letter paths.</li>
-            <li><b>SQL Server work.</b> Writing and debugging stored procedures and queries, reviewing execution plans and indexes, and resolving slow or timing-out queries — using SSMS and DBeaver daily.</li>
-            <li><b>Redis caching.</b> Introducing caching layers for frequently read configuration and lookup data, designing key structures and expiry, and wiring up invalidation so cached values refresh when the source changes.</li>
-            <li><b>Search &amp; indexing.</b> Working with OpenSearch / Elasticsearch on index and mapping design, analyzer configuration and query tuning for faster, more accurate search results.</li>
-            <li><b>Deployments &amp; production support.</b> Supporting Kubernetes-based deployments, monitoring running services through logs and dashboards, and handling live production issues end to end — reproduce, root cause, fix, verify.</li>
-            <li><b>Integrations.</b> Building and maintaining third-party API and webhook integrations, handling JSON payloads, authentication and token lifecycles, and error handling for unreliable upstreams.</li>
-            <li><b>Version control.</b> Managing branching, code review and release branches in Git across multiple service repositories.</li>
+            <li><b>Backend services &amp; REST APIs.</b> Developing and maintaining services and REST APIs in C#, .NET Core and ASP.NET Core — request validation, dependency injection, configuration and background worker services.</li>
+            <li><b>Event-driven microservices.</b> Kafka producers and consumers passing messages between services: consumer groups, offset management, retries, serialization and dead-letter paths, with consumer lag watched throughout.</li>
+            <li><b>Stream processing with Apache Flink (Java).</b> Working on streaming jobs that keep the data pipeline in sync — diagnosing lag bursts and TaskManager failures, and tuning job parallelism and autoscaling to restore throughput.</li>
+            <li><b>Python services.</b> Building and maintaining a webhook API dispatcher, scheduled cron jobs, and a dynamic query-builder module used by a web and news data indexing service.</li>
+            <li><b>SQL Server.</b> Writing and debugging stored procedures and queries over large production tables, reviewing execution plans and indexes, and resolving slow or timing-out queries.</li>
+            <li><b>Redis caching.</b> Caching layers for frequently read configuration and lookup data, with key structures, expiry and invalidation wired up so cached values refresh when the source changes.</li>
+            <li><b>Search &amp; indexing.</b> OpenSearch / Elasticsearch index and mapping design, analyzer configuration and query tuning for faster, more accurate search.</li>
+            <li><b>Deployments &amp; production support.</b> Supporting Kubernetes deployments, monitoring services through logs and dashboards, and handling live issues end to end — reproduce, root cause, fix, verify.</li>
+            <li><b>Integrations.</b> Third-party REST API and webhook integrations — JSON payloads, OAuth token refresh lifecycles, rate limits and error handling for unreliable upstreams.</li>
           </ul>
         </div>
 
         <div class="tl-item">
           <div class="tl-date">Jan 2026 &ndash; Apr 2026</div>
-          <h3>Backend Developer Intern (.NET)</h3>
+          <h3>Backend Developer Intern</h3>
           <p class="tl-org">Locobuzz &middot; Internship</p>
           <ul>
             <li>Learned the .NET Core service codebase and the platform's microservice architecture, then started on scoped bug fixes and small features in live services.</li>
@@ -91,14 +123,14 @@
   </section>
 
   <!-- Architecture diagram -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <span class="eyebrow">The shape of the work</span>
       <h2 class="section-title">A pipeline I work inside</h2>
       <p class="section-sub">
         A generic view of the kind of event-driven flow my services sit in — data arrives
-        from external platforms, travels through Kafka, and is processed by .NET Core
-        consumers that read and write across a cache, a relational store and a search index.
+        from external platforms, travels through Kafka, and is processed by consumers that
+        read and write across a cache, a relational store and a search index.
       </p>
 
       <div class="diagram">
@@ -129,8 +161,8 @@
             <text x="404" y="162" font-size="12" font-weight="400" fill="#c98c7c">partitioned stream</text>
 
             <rect x="502" y="121" width="132" height="58" rx="9" fill="#151a21" stroke="#242b35"></rect>
-            <text x="568" y="145">.NET Core</text>
-            <text x="568" y="162" font-size="12" font-weight="400" fill="#9aa6b4">Consumer Service</text>
+            <text x="568" y="145">Consumers</text>
+            <text x="568" y="162" font-size="12" font-weight="400" fill="#9aa6b4">.NET &middot; Flink &middot; Python</text>
 
             <rect x="676" y="30" width="134" height="52" rx="9" fill="#101c24" stroke="#38bdf8"></rect>
             <text x="743" y="54" fill="#38bdf8">Redis</text>
@@ -160,7 +192,7 @@
   </section>
 
   <!-- Skills matrix -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <span class="eyebrow">Technical skills</span>
       <h2 class="section-title">What I work with</h2>
@@ -171,21 +203,21 @@
           <h3>Languages &amp; Frameworks</h3>
           <ul>
             <li>C# &mdash; primary language</li>
-            <li>.NET Core / .NET 8&ndash;9, ASP.NET Core</li>
-            <li>REST API design, Web API controllers</li>
-            <li>Background &amp; worker services</li>
-            <li>Python, Java, JavaScript (working knowledge)</li>
+            <li>.NET Core / .NET 8&ndash;9, ASP.NET Core, EF Core</li>
+            <li>Python &mdash; services, dispatchers, scheduled jobs</li>
+            <li>Java &mdash; Apache Flink streaming jobs</li>
+            <li>SQL (T-SQL), JavaScript</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Data &amp; Messaging</h3>
+          <h3>Streaming, Data &amp; Messaging</h3>
           <ul>
-            <li>SQL Server &mdash; stored procedures, query tuning, indexing</li>
             <li>Apache Kafka &mdash; producers, consumers, consumer groups</li>
+            <li>Apache Flink &mdash; job parallelism, lag, autoscaling</li>
+            <li>SQL Server &mdash; stored procedures, query tuning, indexing</li>
             <li>Redis &mdash; caching, key design, invalidation</li>
             <li>OpenSearch / Elasticsearch &mdash; indexing, analyzers</li>
-            <li>JSON &amp; Avro payload handling</li>
           </ul>
         </div>
 
@@ -195,19 +227,19 @@
             <li>Kubernetes &mdash; deployments, pods, logs</li>
             <li>Docker &mdash; containerised services</li>
             <li>Git &mdash; branching, code review, releases</li>
-            <li>SSMS, DBeaver, Postman</li>
-            <li>Log &amp; metrics dashboards for monitoring</li>
+            <li>CI/CD pipelines</li>
+            <li>SSMS, DBeaver, Postman, Visual Studio</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Practices</h3>
+          <h3>Core Concepts</h3>
           <ul>
-            <li>Production support &amp; incident troubleshooting</li>
-            <li>Root-cause analysis across service boundaries</li>
-            <li>Backend performance optimisation</li>
-            <li>Third-party API &amp; webhook integration</li>
-            <li>Writing tests around the behaviour I change</li>
+            <li>OOP and SOLID principles, design patterns</li>
+            <li>Data structures &amp; algorithms</li>
+            <li>Concurrency, async programming, multithreading</li>
+            <li>Distributed systems &amp; system design fundamentals</li>
+            <li>Unit testing, production support, root-cause analysis</li>
           </ul>
         </div>
       </div>

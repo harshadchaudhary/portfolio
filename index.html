@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harshad Chaudhary | Junior .NET Backend Developer</title>
-  <meta name="description" content="Junior .NET Backend Developer with 10 months of production experience building REST APIs and event-driven microservices with C#, .NET Core, Kafka, Redis, SQL Server and Kubernetes.">
-  <meta property="og:title" content="Harshad Chaudhary | Junior .NET Backend Developer">
-  <meta property="og:description" content="C# · .NET Core · ASP.NET · Kafka · Redis · SQL Server · OpenSearch · Kubernetes">
+  <title>Harshad Chaudhary | Junior Software Engineer &mdash; Backend</title>
+  <meta name="description" content="Junior Software Engineer (Backend) with 10 months of production experience across C#/.NET, Python and Java — REST APIs, Kafka and Flink streaming, Redis, SQL Server, OpenSearch and Kubernetes.">
+  <meta property="og:title" content="Harshad Chaudhary | Junior Software Engineer — Backend">
+  <meta property="og:description" content="C# · .NET Core · Python · Java · Kafka · Flink · Redis · SQL Server · OpenSearch · Kubernetes">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://harshadchaudhary.github.io/portfolio/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9881;</text></svg>">
@@ -36,30 +36,33 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <span class="eyebrow">Mumbai, India &middot; Open to opportunities</span>
+      <span class="eyebrow">Mumbai, India &middot; Open to backend engineering roles</span>
       <h1>Hi, I'm <span>Harshad Chaudhary</span></h1>
-      <p class="role">Junior .NET Backend Developer at Locobuzz</p>
+      <p class="role">Junior Software Engineer &mdash; Backend</p>
       <p class="blurb">
-        I build and maintain backend services, REST APIs and event-driven microservices
-        in C# and .NET Core — running in production on Kubernetes, moving data through
-        Kafka, cached in Redis, searched through OpenSearch and stored in SQL Server.
-        Ten months in, most of my day is real production code: shipping features,
-        tuning queries and debugging live incidents.
+        Ten months building and running backend services in production across
+        <b>C# / .NET Core</b>, <b>Python</b> and <b>Java</b> — REST APIs and event-driven
+        microservices on <b>Kafka</b>, stream processing with <b>Apache Flink</b>, data in
+        <b>SQL Server</b>, <b>Redis</b> and <b>OpenSearch</b>, all deployed on <b>Kubernetes</b>.
+        Most of my day is real production code: shipping features, cutting query load and
+        debugging live incidents to root cause.
       </p>
 
       <div class="tech-strip">
         <span class="chip chip-accent">C#</span>
         <span class="chip chip-accent">.NET Core</span>
-        <span class="chip chip-accent">ASP.NET Core</span>
+        <span class="chip chip-accent">Python</span>
+        <span class="chip chip-accent">Java</span>
+        <span class="chip">ASP.NET Core</span>
         <span class="chip">REST APIs</span>
         <span class="chip">Microservices</span>
         <span class="chip">Apache Kafka</span>
+        <span class="chip">Apache Flink</span>
         <span class="chip">Redis</span>
         <span class="chip">SQL Server</span>
-        <span class="chip">OpenSearch / Elasticsearch</span>
+        <span class="chip">OpenSearch</span>
         <span class="chip">Kubernetes</span>
         <span class="chip">Docker</span>
-        <span class="chip">Git</span>
       </div>
 
       <div class="btn-row">
@@ -68,10 +71,10 @@
       </div>
 
       <div class="stats">
-        <div class="stat"><b>10 months</b><span>Backend experience in production</span></div>
-        <div class="stat"><b>.NET&nbsp;8/9</b><span>Primary stack, C# services</span></div>
-        <div class="stat"><b>Kafka</b><span>Event-driven consumers &amp; producers</span></div>
-        <div class="stat"><b>K8s</b><span>Deployments &amp; production support</span></div>
+        <div class="stat"><b>10 months</b><span>Production backend experience</span></div>
+        <div class="stat"><b>3 languages</b><span>C#, Python and Java, all shipped</span></div>
+        <div class="stat"><b>~300 msg/s</b><span>Pipeline throughput validated under load</span></div>
+        <div class="stat"><b>21k &rarr; 150</b><span>Daily queries cut by a Redis cache layer</span></div>
       </div>
     </div>
   </section>
@@ -94,32 +97,50 @@
 
         <div class="card">
           <h3>&#128260; Event-Driven Microservices</h3>
-          <p>Kafka producers and consumers moving messages between services — consumer groups, offsets, retries and dead-letter handling, with an eye on lag and throughput.</p>
+          <p>Kafka producers and consumers moving messages between services — consumer groups, offsets, retries and dead-letter handling. Validated a pipeline holding ~300 messages/second under load testing.</p>
           <div class="card-tags"><span>Kafka</span><span>Microservices</span><span>Avro / JSON</span></div>
         </div>
 
         <div class="card">
+          <h3>&#127754; Stream Processing with Flink</h3>
+          <p>Working on Apache Flink streaming jobs in Java — diagnosing consumer-lag bursts and TaskManager failures, and tuning job parallelism and autoscaling to bring throughput back.</p>
+          <div class="card-tags"><span>Apache Flink</span><span>Java</span><span>Streaming</span></div>
+        </div>
+
+        <div class="card">
+          <h3>&#128013; Python Services</h3>
+          <p>Building and maintaining Python services: a webhook API dispatcher, scheduled cron jobs, and a dynamic query-builder module for a web and news data indexing service.</p>
+          <div class="card-tags"><span>Python</span><span>Webhooks</span><span>Cron</span></div>
+        </div>
+
+        <div class="card">
           <h3>&#128451; SQL Server &amp; Query Tuning</h3>
-          <p>Writing and debugging stored procedures, shaping schemas and indexes, and tracing slow queries back to the plan that caused them. Daily driver tools: SSMS and DBeaver.</p>
+          <p>Writing and debugging stored procedures, shaping indexes, and tracing slow queries to the plan that caused them. Removed a runaway pattern behind ~1.4 million redundant database calls.</p>
           <div class="card-tags"><span>SQL Server</span><span>SSMS</span><span>DBeaver</span></div>
         </div>
 
         <div class="card">
-          <h3>&#9889; Caching with Redis</h3>
-          <p>Adding Redis caching layers in front of hot reads, designing key patterns and TTLs, and handling cache invalidation so services stay fast without serving stale data.</p>
+          <h3>&#9889; Caching &amp; Performance</h3>
+          <p>Redis caching in front of hot reads, with key design, TTLs and an invalidation contract. One two-tier cache took a repeated config lookup from ~21,000 queries/day to ~150.</p>
           <div class="card-tags"><span>Redis</span><span>Caching</span><span>Performance</span></div>
         </div>
 
         <div class="card">
           <h3>&#128269; Search &amp; Indexing</h3>
-          <p>Working with OpenSearch / Elasticsearch — index design, analyzer and mapping configuration, and tuning queries so search stays accurate and quick at scale.</p>
+          <p>OpenSearch / Elasticsearch — index and mapping design, analyzer configuration, and query tuning so search stays accurate and quick at scale.</p>
           <div class="card-tags"><span>OpenSearch</span><span>Elasticsearch</span><span>Analyzers</span></div>
         </div>
 
         <div class="card">
           <h3>&#128736; Deployment &amp; Production Support</h3>
-          <p>Supporting Kubernetes-based deployments, reading logs and metrics to monitor running services, and handling production troubleshooting from first report to root cause.</p>
+          <p>Supporting Kubernetes deployments, reading logs and metrics to monitor running services, and owning production incidents from first report through to verified root cause.</p>
           <div class="card-tags"><span>Kubernetes</span><span>Docker</span><span>Monitoring</span></div>
+        </div>
+
+        <div class="card">
+          <h3>&#129504; Fundamentals</h3>
+          <p>OOP and SOLID, design patterns, data structures and algorithms, concurrency and async programming, and the distributed-systems basics a multi-service platform forces you to learn properly.</p>
+          <div class="card-tags"><span>OOP</span><span>SOLID</span><span>DSA</span><span>Concurrency</span></div>
         </div>
       </div>
     </div>

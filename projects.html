@@ -49,8 +49,8 @@
       <span class="eyebrow">Professional &middot; Locobuzz</span>
       <h2 class="section-title">Production backend work</h2>
       <p class="section-sub">
-        Built with C#, .NET Core and ASP.NET Core, deployed on Kubernetes. Described at the
-        level of what the systems do — internal implementation details stay internal.
+        Built with C#/.NET Core, Python and Java, deployed on Kubernetes. Described at the level
+        of what the systems do — internal implementation details stay internal.
       </p>
 
       <div class="grid">
@@ -63,6 +63,27 @@
             so the pipeline keeps up with incoming volume.
           </p>
           <div class="card-tags"><span>C#</span><span>.NET Core</span><span>Kafka</span><span>Microservices</span></div>
+        </div>
+
+        <div class="card">
+          <h3>&#127754; Flink Stream Processing</h3>
+          <p>
+            Apache Flink streaming jobs written in Java that keep the data pipeline in sync.
+            Work here has been operational depth more than greenfield code: diagnosing
+            consumer-lag bursts and TaskManager failures, and tuning job parallelism and
+            autoscaling until throughput recovered.
+          </p>
+          <div class="card-tags"><span>Apache Flink</span><span>Java</span><span>Streaming</span><span>Autoscaling</span></div>
+        </div>
+
+        <div class="card">
+          <h3>&#128013; Python Services</h3>
+          <p>
+            A webhook API dispatcher, scheduled cron jobs, and a dynamic query-builder module
+            used by a web and news data indexing service &mdash; building the query shapes the
+            indexer issues, and keeping the scheduled side running reliably.
+          </p>
+          <div class="card-tags"><span>Python</span><span>Webhooks</span><span>Cron jobs</span><span>Query building</span></div>
         </div>
 
         <div class="card">
