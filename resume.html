@@ -107,15 +107,22 @@
     .sheet li { margin-bottom: 2.5px; }
     .sheet li b { color: #10151a; font-weight: 700; }
 
-    .r-skill {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 3px 12px;
-      font-size: 12.4px;
+    /* Label and values sit in ONE text line, not two columns. A two-column
+       layout (grid or flex) is physically fine in the PDF, but a resume
+       parser that reconstructs reading order by detecting columns emits all
+       the labels first and then all the values, breaking the pairing. Inline
+       keeps every pair in a single text run, which no parser can split. */
+    .r-skill { font-size: 12.4px; margin: 0; }
+
+    .r-skill-row {
+      margin-bottom: 3px;
+      text-indent: -14px;
+      padding-left: 14px;
     }
 
-    .r-skill dt { font-weight: 700; color: #10151a; }
-    .r-skill dd { margin: 0; color: #343d47; }
+    .r-skill-row:last-child { margin-bottom: 0; }
+    .r-skill dt { display: inline; font-weight: 700; color: #10151a; }
+    .r-skill dd { display: inline; margin: 0; color: #343d47; }
 
     .r-proj { margin-bottom: 7px; }
     .r-proj:last-child { margin-bottom: 0; }
@@ -145,8 +152,7 @@
 
     @media (max-width: 720px) {
       .sheet { padding: 28px 22px 32px; font-size: 13px; }
-      .r-skill { grid-template-columns: 1fr; }
-      .r-skill dd { margin-bottom: 6px; }
+      .r-skill-row { margin-bottom: 7px; }
       .r-job-head, .r-row { flex-direction: column; gap: 0; }
       .sheet-note { margin-left: 0; }
     }
@@ -176,7 +182,8 @@
       .r-when, .r-org { font-size: 7.9pt; }
       .r-job { margin-bottom: 6px; }
       .sheet li { margin-bottom: 1.2px; }
-      .r-skill { font-size: 7.9pt; grid-template-columns: 120px 1fr; gap: 1px 10px; }
+      .r-skill { font-size: 7.9pt; }
+      .r-skill-row { margin-bottom: 1.4px; text-indent: -11px; padding-left: 11px; }
       .r-proj { margin-bottom: 4px; }
       .r-proj em { font-size: 7.7pt; }
       .r-row, .r-inline { font-size: 8pt; }
@@ -271,13 +278,13 @@
         <section class="r-sec">
           <h2>Technical Skills</h2>
           <dl class="r-skill">
-            <dt>Languages</dt><dd>C#, Python, SQL (T-SQL), Java, JavaScript</dd>
-            <dt>Backend</dt><dd>.NET Core / .NET 8&ndash;9, ASP.NET Core, Web API, Entity Framework Core, REST, microservices</dd>
-            <dt>Streaming &amp; Messaging</dt><dd>Apache Kafka, Apache Flink, event-driven architecture, webhook APIs</dd>
-            <dt>Data &amp; Caching</dt><dd>SQL Server (stored procedures, indexing, query optimisation), Redis, OpenSearch / Elasticsearch, MySQL, MongoDB</dd>
-            <dt>DevOps &amp; Tools</dt><dd>Kubernetes, Docker, Git / GitHub, CI/CD pipelines, SSMS, DBeaver, Postman, Visual Studio</dd>
-            <dt>Core Concepts</dt><dd>OOP, SOLID, design patterns, data structures &amp; algorithms, concurrency &amp; async programming, multithreading, distributed systems, system design fundamentals</dd>
-            <dt>Practices</dt><dd>Production support, root-cause analysis, performance optimisation, unit testing, code review</dd>
+            <div class="r-skill-row"><dt>Languages:</dt> <dd>C#, Python, SQL (T-SQL), Java, JavaScript</dd></div>
+            <div class="r-skill-row"><dt>Backend:</dt> <dd>.NET Core / .NET 8&ndash;9, ASP.NET Core, Web API, Entity Framework Core, REST, microservices</dd></div>
+            <div class="r-skill-row"><dt>Streaming &amp; Messaging:</dt> <dd>Apache Kafka, Apache Flink, event-driven architecture, webhook APIs</dd></div>
+            <div class="r-skill-row"><dt>Data &amp; Caching:</dt> <dd>SQL Server (stored procedures, indexing, query optimisation), Redis, OpenSearch / Elasticsearch, MySQL, MongoDB</dd></div>
+            <div class="r-skill-row"><dt>DevOps &amp; Tools:</dt> <dd>Kubernetes, Docker, Git / GitHub, CI/CD pipelines, SSMS, DBeaver, Postman, Visual Studio</dd></div>
+            <div class="r-skill-row"><dt>Core Concepts:</dt> <dd>OOP, SOLID, design patterns, data structures &amp; algorithms, concurrency &amp; async programming, multithreading, distributed systems, system design fundamentals</dd></div>
+            <div class="r-skill-row"><dt>Practices:</dt> <dd>Production support, root-cause analysis, performance optimisation, unit testing, code review</dd></div>
           </dl>
         </section>
 
